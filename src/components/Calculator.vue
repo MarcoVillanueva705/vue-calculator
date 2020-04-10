@@ -1,10 +1,9 @@
 <template>
   <div class="calculator">
-      <div class="display">0.0534</div>
-    <div class = "btn">C</div>
-    <div class = "btn">+/-</div>
-    <div class = "btn">%</div>
-   
+      <div class="display">{{current || '0' }}</div>
+    <div @click ="clear" class = "btn">C</div>
+    <div @click = "sign" class = "btn">+/-</div>
+    <div class = "btn">%</div> 
     <div class = "btn operator">/</div>
     <div class = "btn">7</div>
     <div class = "btn">8</div>
@@ -26,13 +25,28 @@
 
 <script>
 export default {
-  
-}
+    data() {
+        return {
+            current:'1',
+        }
+        },
+        methods: {
+            clear() {
+                this .current = '';
+            }
+        },
+            sign() {
+            this.current =  this.current.charAt(0) === '-' ?
+                this.current.slice(1) : `-${this.current}`;
+            }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .calculator {
+    width: 400px;
+    margin: 0 auto;
     font-size: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
