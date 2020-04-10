@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Calulator />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -9,13 +8,10 @@
   </div>
 </template>
 <script>
-import Calculator from './components/Calculator.vue'
 
 export default {
   name: 'app',
-  components: {
-    Calculator
-  }
+  
 }
 </script>
 
