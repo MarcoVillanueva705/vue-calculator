@@ -8,7 +8,7 @@
     <div class = "btn">7</div>
     <div class = "btn">8</div>
     <div class = "btn">9</div> 
-    <div class = "btn operator">x</div>
+    <div @click = "multiply" class = "btn operator">x</div>
     <div class = "btn">4</div>
     <div class = "btn">5</div> 
     <div class = "btn">6</div>
@@ -46,6 +46,7 @@ export default {
             division() {
                 this.operator = (a, b) => a / b;
             }
+            
     }
 </script>
 
