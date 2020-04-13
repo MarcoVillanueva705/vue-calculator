@@ -45,8 +45,11 @@ export default {
             },
             division() {
                 this.operator = (a, b) => a / b;
+            },
+            multiply() {
+                this.operator = (a, b) => a * b;
             }
-            
+
     }
 </script>
 
