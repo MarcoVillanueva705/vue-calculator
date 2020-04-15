@@ -48,19 +48,24 @@ export default {
             division() {
                 this.operator = (a, b) => a / b;
                 this.previous = this.current;
-                this.setPrevious();            },
+                this.setPrevious();           
+            },
             multiply() {
                 this.operator = (a, b) => a * b;
                 this.previous = this.current;
-                this.setPrevious();            },
+                this.setPrevious();            
+                
+                },
             subtract() {
                 this.operator = (a, b) => a - b;
                 this.previous = this.current;
-               this.setPrevious();            },
+               this.setPrevious();           
+                },
             add() {
                 this.operator = (a, b) => a + b;
                 this.previous = this.current;
-               this.setPrevious();            },
+               this.setPrevious();            
+               },
             dot() {
                 if (this.current.indexOf('.') === -1) {
                     this.append('.');
