@@ -36,8 +36,8 @@ export default {
         methods: {
             clear() {
                 this.current = '';
-            }
-        },
+            },
+        
             sign() {
             this.current =  this.current.charAt(0) === '-' ?
                 this.current.slice(1) : `-${this.current}`;
@@ -71,13 +71,15 @@ export default {
                 this.previous = this.current;
                 this.operatorClicked = true;
             },
+
             append(number) {
-            if(this.operatorClicked) {
-            this.current = '';
-            this.operatorClicked = false;
-            }
-            this.current = `${this.current}${number}`;
+                if (this.operatorClicked) {
+                    this.current = '';
+                    this.operatorClicked = false;
+                }
+                this.current = `${this.current}${number}`
             },
+
             equal() {
                 this.current = `${this.operator(
                     parseFloat(this.current),
@@ -85,6 +87,7 @@ export default {
             )}`;
             this.previous = null;
             }
+        }
 
     }
 </script>
