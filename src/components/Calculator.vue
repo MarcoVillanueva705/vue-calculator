@@ -47,23 +47,19 @@ export default {
             },
             division() {
                 this.operator = (a, b) => a / b;
-                this.previous = this.current;
                 this.setPrevious();           
             },
             multiply() {
                 this.operator = (a, b) => a * b;
-                this.previous = this.current;
                 this.setPrevious();            
                 
                 },
             subtract() {
                 this.operator = (a, b) => a - b;
-                this.previous = this.current;
                this.setPrevious();           
                 },
             add() {
                 this.operator = (a, b) => a + b;
-                this.previous = this.current;
                this.setPrevious();            
                },
             dot() {
@@ -81,10 +77,6 @@ export default {
             this.operatorClicked = false;
             }
             this.current = `${this.current}${number}`;
-            },
-            setPrevious() {
-                this.previous = this.current;
-                this.operatorClicked = true;
             },
             equal() {
                 this.current = `${this.operator(
